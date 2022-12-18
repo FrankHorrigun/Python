@@ -1,0 +1,8 @@
+# Напишите программу, которая на вход принимает 5 чисел и находит максимальное из них.
+for i in range(5):
+    list[i] = int(input(f'введите {i+1}число'))
+print(list)
+# for i in range(5):
+#     if max > list[1]:
+#         max = list[i]
+# print(max)
