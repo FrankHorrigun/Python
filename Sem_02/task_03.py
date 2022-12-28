@@ -2,8 +2,8 @@
 
 def Count_of_insertions(text1, text2):
     count = 0
-    for i in range(len(text1)):
-        if text2 in text1[i]:
+    for i in range(len(text1)-len(text2)+1):
+        if text1[i:i+len(text2)] == text2: # len(text2) - это дли подстроки
             count += 1
     return count
 
