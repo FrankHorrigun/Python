@@ -8,8 +8,11 @@ for i in range(1, n+1):
 
 # ipanarot slovar
 print()
-a = {}  # задаем словарь синтаксис a{i, x} i - ключ, ч-х значение
+a = {}  # задаем словарь синтаксис a{i, x} i - ключ, а х значение
 n = int(input('введите число: '))
 for i in range(1, n+1):
     a[i] = n*3+1
 print(a)
+
+
+#print (one_str.count (two_str)) короткое решение за счет встроенной функции каунт

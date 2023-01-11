@@ -3,7 +3,7 @@
 def Count_of_insertions(text1, text2):
     count = 0
     for i in range(len(text1)-len(text2)+1):
-        if text1[i:i+len(text2)] == text2: # len(text2) - это дли подстроки
+        if text1[i:i+len(text2)] == text2: # len(text2) - это дли подстроки. диапазон начиная с I и заканчивая i+len(text2)
             count += 1
     return count
 
