@@ -3,10 +3,17 @@
 import random
 list = [10, 5, 3, 4, 8]
 
-random_index = [len(list)]
-random_index[0] = random.randrange(0, len(list))
-for i in range(1, len(random_index)):
-    x = random.randrange(1, len(list))
-    if x not in random_index[i:len(random_index)]:
-        random_index[i] = x
-print(random_index)
+random_index = []
+uniq_random = random.randrange(0, len(list))
+
+while len(random_index) < len(list):
+    while uniq_random in random_index:
+        uniq_random = random.randrange(0, len(list))
+    random_index.append(uniq_random)
+# print(random_index)
+
+for i in range(len(list)):
+    temp = list[0]
+    list[0] = list[random_index[i]]
+    list[random_index[i]] = temp
+print(list)
