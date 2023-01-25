@@ -15,5 +15,6 @@ import datetime
 
 # print(list)
 
-random_num = datetime.datetime.now().microsecond % 10
+n = input()
+random_num = datetime.datetime.now().microsecond % (n+1)# остаток от числа в диапазоне от 0 до n
 print(random_num)

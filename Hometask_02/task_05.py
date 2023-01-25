@@ -1,12 +1,12 @@
 # Реализуйте алгоритм перемешивания списка.
 
 import random
-list = [10, 5, 3, 4, 8]
+list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 random_index = []
 uniq_random = random.randrange(0, len(list))
 
-while len(random_index) < len(list):
+while len(random_index) < len(list):# тут свое решение предложил. перемешивает ВСЕ элементы списка
     while uniq_random in random_index:
         uniq_random = random.randrange(0, len(list))
     random_index.append(uniq_random)
