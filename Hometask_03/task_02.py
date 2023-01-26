@@ -11,7 +11,7 @@ list2 = [2, 3, 5, 6]
 
 def Composition_of_elements(list):
     composition = []
-    pivot = 0
+    pivot = 0 # не оптимально, но как решил так решил, надо было сразу его задать как len(list)//2 + len(list)%2
     if len(list) % 2 != 0:
         pivot = int(len(list)/2+1)
     else:
