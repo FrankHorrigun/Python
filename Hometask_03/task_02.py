@@ -19,7 +19,7 @@ def Composition_of_elements(list):
 
     for i in range(pivot):
         composition.append(list[i]*list[len(list)-i-1])
-    return composition
+    return composition 
 
 
 print(Composition_of_elements(list1))
