@@ -16,11 +16,16 @@ def weater(n):
 
 
 def ottepel(list):
-    count=0
-    for i in range(1, len(list)):
-        if list[i] > 0 and list[i-1] > 0:
-            count += 1
-    return count
+    count =0
+    result=[]
+    for i in range(len(list)):
+        if list[i]>0:
+            count =1
+            for i in range(i+1, len(list)):
+                if list[i] > 0 and list[i-1] > 0:
+                    count += 1
+                result.append(count)
+    return result
 
 
 n = int(input('введите количество дней: '))
@@ -31,8 +36,22 @@ ottepel_count = 0
 if 1 <= n <= 100:
     temp_list = weater(n)
     print(temp_list)
-    ottepel_count = ottepel(temp_list)
+    print(ottepel(temp_list))
+    ottepel_count = max(ottepel(temp_list))
     print(ottepel_count)
 
 else:
     print('введите число от 1 до ста')
+
+
+day = int(input())
+k = 0
+max = 0
+for i in range(day):
+temp = int(input())
+if temp > 0:
+k += 1
+else:
+if max < k:
+max = k
+k = 0

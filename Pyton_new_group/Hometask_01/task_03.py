@@ -7,7 +7,7 @@
 number = input('Введите номер билета: ')
 
 number = [int(i) for i in number]
-if sum(number[:3]) == sum(number[3:]):
+if sum(number[:3]) == sum(number[3:]):#ну тут срезы сделал для для 6-значных чисел. если для других, то циклом надо
     print('lucky ')
 else:
     print('unlucky')

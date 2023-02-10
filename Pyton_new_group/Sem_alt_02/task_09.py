@@ -12,3 +12,6 @@ while number >0:
     mult*=number
     number-=1
 print(mult)
+
+for i in range(1, number+1):
+    mult*=i
