@@ -8,7 +8,7 @@ n = int(input('iput n: '))
 m = int(input('input m: '))
 k = int(input('iput k: '))
 
-if n % k == 0 or m % k == 0:
+if k< m*n and (k % n == 0 or k % m == 0):
     print('True')
 else:
     print('False')
