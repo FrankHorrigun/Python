@@ -6,24 +6,8 @@
 
 number = input('Введите номер билета: ')
 
-if len(number)!=6:
-    print('введите шетсизначное число')
-number = int(number)
-first =0
-second =0
-list_number=[]
-while number>0:
-    list_number.append(number%10)
-    number//=10
-print(list_number)
-print(type(list_number))
-
-for i in range(int(len(list_number)/2+1)):
-    first += list_number[i]
-    print(first)
-    second +=list_number[:-i-1]
-    print(second)
-if first!=second:
-    print('False')
+number = [int(i) for i in number]
+if sum(number[:3]) == sum(number[3:]):
+    print('lucky ')
 else:
-    print('True')
+    print('unlucky')
