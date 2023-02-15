@@ -6,11 +6,13 @@
 
 x = int(input("x="))
 y = int(input("y="))
-s = int(input("s="))
-p = int(input("p="))
-kate = int(input("kate="))
+# s = int(input("s="))
+# p = int(input("p="))
+# kate = int(input("kate="))
 
-if kate == x+y and x*y:
-    print('угадала')
-else:
-    print('пробуй еще')
+# if kate == x+y and x*y:
+for i in range(x):
+    for j in range(y):
+        if x == i+j and y == i*j:
+            print('угадала', i, j)
+
