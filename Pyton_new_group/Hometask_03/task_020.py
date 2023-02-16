@@ -23,13 +23,39 @@
 # Вывод:
 # 12
 
+rus_dict = \
+    {
+        1: 'АВЕИНОРСТ',
+        2: 'ДКЛМПУ',
+        3: 'БГЁЬЯ',
+        4: 'ЙЫ',
+        5: 'ЖЗХЦЧ',
+        8: 'ШЭЮ',
+        10:'ФЩЪ'
+    }
 ingl_dict = \
     {
-        '1': 'A, E, I, O, U, L, N, S, T, R',
-        '2': 'D, G',
-        '3': 'B, C, M, P',
-        '4': 'F, H, V, W, Y',
-        '5': 'K',
-        '8': 'J, X',
-        '10': 'Q, Z'
+        1: 'AEIOULNSTR',
+        2: 'DG',
+        3: 'BCMP',
+        4: 'FHVWY',
+        5: 'K',
+        8: 'JX',
+        10:'QZ'
     }
+
+
+def scrabble(dict, string):
+    count = 0
+    for i in string:
+        for j in dict:
+            if i in dict[j]:#в этом месте запарка была, как к словарю обратиться. ключ не допер, что надо писать 
+                count += j
+    return count
+
+
+word = str(input('введите слово: ')).upper()
+print(word)
+result = scrabble(ingl_dict, word)+scrabble(rus_dict, word)#я семинар с решением посмотрел, 52 строка все не работала. Но мы тут суммируем, это не ошибка, надеюсь
+print(result)
+
