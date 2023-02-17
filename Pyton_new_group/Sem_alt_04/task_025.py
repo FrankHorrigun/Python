@@ -7,13 +7,14 @@
 # Для решения данной задачи используйте функцию
 # .split()
 
-# list = input().split()
-list = 'a a a b c a a d c d d'
-print(list)
-dict = {list[0]: [1]}
-x=1
-for i in list:
-    if i in dict:
-        x+=1
-        dict.update([i])
-print(dict)
+lst = input().split()
+
+print(lst, end='\n')
+dct = {}
+
+for i in lst:
+    if i in dct:
+        print(f'{i}_{dct[i]}', end=' ')
+    else:
+        print(f'{i}_{0}', end=' ')
+    dct[i] = dct.get(i,0)+1
