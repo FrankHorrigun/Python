@@ -13,3 +13,24 @@
 
 # 4 -> 1 2 3 4
 # 9
+
+# import random
+# n = int(input('введите число кустов: '))
+# lst = [random.randint(1,10) for i in range(n)]
+
+# print(lst)
+lst = [1,2,3,4,55]#для проверки сам лист прописал
+res={}
+for i in range(len(lst)-1):
+    if i< len(lst):
+        farm =lst[i-1]+lst[i]+lst[i+1]
+        res[i]=farm
+    else:
+        farm =lst[i-1]+lst[i]+lst[-1]
+        res[i] = farm
+print(max(res.values()))# вроде робит. написал сам без просмотра семинара
+
+
+
+
+

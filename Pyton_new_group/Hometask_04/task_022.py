@@ -15,7 +15,7 @@ def create_list(x):
     return lst
 
 
-def dizz(lst1, lst2):
+def intersection(lst1, lst2):
     new_set = set()
     for i in lst1:
         if i in lst2:
@@ -23,27 +23,31 @@ def dizz(lst1, lst2):
     return new_set
 
 
-def sort(new_set):
+def sort(new_lst):
 
-    for i in range(len(new_set)):
-        for j in range(i, len(new_set)):
-            if new_set[i] > new_set[j]:
-                new_set[i], new_set[j] = new_set[j], new_set[i]
-    return new_set
+    for i in range(len(new_lst)):
+        for j in range(i, len(new_lst)):
+            if new_lst[i] > new_lst[j]:
+                new_lst[i], new_lst[j] = new_lst[j], new_lst[i]
+    return new_lst
 
 
 # n = int(input('введите длину первого набора чисел: '))
 # m = int(input('введите длину второго набора чисел: '))
 # lst1 = create_list(n)
 # lst2 = create_list(m)
-lst1=[2,4,5,8,10,12,10,8,6,4,2]
+lst1=[2,4,5,8,10,12,10,8,6,4,2,18]#для проверки взял значение из примера. функцию на ввод написал
 lst2=[3,6,9,12,15,18]
 
 new_set = set()
 
 if len(lst1) > len(lst2):
-    new_set = dizz(lst1, lst2)
+    new_set = intersection(lst1, lst2)
 else:
-    new_set = dizz(lst2, lst1)
-new_set=sort(new_set)
+    new_set = intersection(lst1, lst2)
+   # new_set=sort(new_set)
 print(new_set)
+new_lst = sort(list(new_set))
+# new_lst=sort(new_lst)
+print(new_lst)
+
