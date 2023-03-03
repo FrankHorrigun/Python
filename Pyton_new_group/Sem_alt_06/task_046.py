@@ -17,12 +17,12 @@
 
 def sum_div(x):
     count = 0
-    for i in range(2, x):
-        if x%i==0:
-            if count+i <=x:
-                count+=i
+    for i in range(1, x+1):
+        if x % i == 0:
+            count += i
+            # print(count)
     return count
-            
+
 # def frendly_numbers(n, m):
 #     res=[]
 #     if sum_div(n) ==m and sum_div(m)==n:
@@ -31,6 +31,17 @@ def sum_div(x):
 
 
 k = int(input(' : '))
+res=[]
 if k<=10**5:
-    print(sum_div(k))
 
+    for i in range(k, 1, -1):
+        n=sum_div(i)
+        # print('n', n)
+        for j in range(i-1, 1, -1):
+            m=sum_div(j)
+            # print('j', j)
+            if m==i and n==j:
+                res.append(j)
+                res.append(i)
+print(res)
+# print(sum_div(300))
