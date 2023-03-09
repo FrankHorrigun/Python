@@ -12,13 +12,18 @@
 # Парам пам-пам
 
 str = 'пара-ра-рам рам-пам-папам па-ра-па-да'
-glas = [а, е, ё, и, о, у, ю, я]
-lst = list(str.split())
-res=[]
-print(lst)
-for i in lst:
-    for j in glas:
-        if j in i>3:
-            res.append(i)
-print(res)
+glas = ['а', 'е', 'ё', 'и', 'й', 'ы', 'о', 'у', 'э', 'ю', 'я']
+phrases = str.split()
+print(phrases)
+# res=[]
+count_glas=[]
+for i in phrases:
+    count_glas.append(len([j for j in i if j in glas]))
+    print(count_glas)
+if count_glas.count(count_glas[0]) == len(count_glas):
+    print('Парам пам-пам')
+else:
+    print('Пам парам')
+
+      
 
